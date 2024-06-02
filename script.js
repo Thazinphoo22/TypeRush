@@ -112,6 +112,7 @@ function startGame(mode) {
   randomWord();
   setInitialTimer();
   startTimer();
+  document.getElementById("myText").focus(); // Focus on the input field so straight away typing not move mouse.
 }
 
 function checkInputText() {
@@ -123,8 +124,7 @@ function checkInputText() {
   } else if (input.length >= currentWord.length) {
     mistakes++;
     document.getElementById("mistakes").innerText = `Mistakes: ${mistakes}`;
-    randomWord();
-    // randomWord() parenthesis invoke function, execute the code if without() just a function reference
+    randomWord(); // randomWord() parenthesis invoke function, execute the code if without() just a function reference
     // no parameter,empty space between ()
   }
 }
@@ -172,8 +172,7 @@ function updateLeaderboard() {
   const leaderboard = document.getElementById("leaderboard");
   const newEntry = document.createElement("li");
   newEntry.innerText = `${playerName}: ${score}`;
-  leaderboard.appendChild(newEntry);
-  // add child node to existing parent node;
+  leaderboard.appendChild(newEntry); // add child node to existing parent node;
 
   // Sort the leaderboard entries based on scores
   const entries = [...leaderboard.children];
