@@ -50,7 +50,7 @@ const hardWords = [
   "airplane",
   "telephone",
   "umbrella",
-  "zebra",
+  "mischievous",
   "television",
   "bicycle",
   "computer",
